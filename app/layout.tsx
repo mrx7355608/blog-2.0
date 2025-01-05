@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html className="bg-gray-950" lang="en">
       <body className={`text-gray-100 ${spaceGrotesk.variable} antialiased`}>
-        <Navbar />
+        <header className="w-full p-4">
+          <Navbar />
+        </header>
         {children}
       </body>
     </html>
