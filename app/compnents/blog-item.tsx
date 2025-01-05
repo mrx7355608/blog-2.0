@@ -1,21 +1,23 @@
-import React from 'react';
+import Link from 'next/link';
 import { IBlog } from '../types/blog.types';
 
 export const BlogItem = ({ blog }: { blog: IBlog }) => {
   return (
     <div className="w-full">
       {/* TITLE */}
-      <h1 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2">
-        {blog.title}
-      </h1>
+      <Link href={'/' + blog.slug} className="text-sky-300">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2">
+          {blog.title}
+        </h1>
+      </Link>
 
       {/* TAGS */}
-      <div className="flex gap-2 items-center mt-1 flex-wrap">
+      <div className="flex gap-2 items-center mt-2 flex-wrap">
         {blog.tags.map((tag) => {
           return (
             <span
               key={tag}
-              className="text-sm sm:text-md bg-gray-900 p-3 py-1 text-sm rounded-md text-sky-600"
+              className="text-sm sm:text-md bg-transparent border border-slate-900 p-3 py-1 rounded-md text-sky-500"
             >
               {tag}
             </span>
@@ -31,9 +33,9 @@ export const BlogItem = ({ blog }: { blog: IBlog }) => {
         <p className="text-gray-600 text-sm mb-1">
           {new Date(blog.date).toDateString().slice(4)}
         </p>
-        <a href={'/' + blog.slug} className="text-sky-400">
-          Read blog →
-        </a>
+        <Link href={'/' + blog.slug} className="text-sky-300">
+          Read more
+        </Link>
       </div>
       <hr className="border-gray-900 mt-5" />
     </div>
