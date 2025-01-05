@@ -1,6 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 
 export const Navbar = () => {
+  const openModal = () => {
+    (document.getElementById('my_modal_5') as any).showModal();
+  };
+
   return (
     <div className="navbar bg-transparent w-full lg:w-3/4 border-2 border-gray-900 mx-auto rounded-lg my-2 mt-4">
       <div className="navbar-start">
@@ -43,7 +49,7 @@ export const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
+        <button className="btn btn-ghost btn-circle" onClick={openModal}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"

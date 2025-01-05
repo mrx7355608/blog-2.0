@@ -1,4 +1,5 @@
 import { BlogsList } from './compnents/blogs-list';
+import { SearchModal } from './compnents/search-modal';
 
 export default function Home() {
   const blogs = [
@@ -49,5 +50,10 @@ export default function Home() {
     },
   ];
 
-  return <BlogsList blogs={blogs} />;
+  return (
+    <>
+      <BlogsList blogs={blogs} />
+      <SearchModal blogs={blogs} />
+    </>
+  );
 }
