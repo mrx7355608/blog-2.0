@@ -34,7 +34,11 @@ export const Navbar = () => {
             <li>
               <a>Homepage</a>
             </li>
-            <li>Portfolio</li>
+            <li>
+              <Link href="https://mrx7355608.github.io/portfolio">
+                Portfolio
+              </Link>
+            </li>
             <li>
               <Link href="/about">About</Link>
             </li>

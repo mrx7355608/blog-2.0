@@ -5,11 +5,11 @@ export const BlogItem = ({ blog }: { blog: IBlog }) => {
   return (
     <div className="w-full">
       {/* TITLE */}
-      <Link href={'/' + blog.slug} className="text-sky-300">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2">
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2">
+        <Link href={'/' + blog.slug} className="hover:underline">
           {blog.title}
-        </h1>
-      </Link>
+        </Link>
+      </h1>
 
       {/* TAGS */}
       <div className="flex gap-2 items-center mt-2 flex-wrap">
