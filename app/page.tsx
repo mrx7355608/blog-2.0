@@ -1,5 +1,5 @@
-import { BlogsList } from './compnents/blogs-list';
-import { SearchModal } from './compnents/search-modal';
+import { BlogsList } from '@/compnents/blogs-list';
+import { SearchModal } from '@/compnents/search-modal';
 
 export default function Home() {
   const blogs = [
