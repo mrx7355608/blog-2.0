@@ -5,3 +5,51 @@
 body {
   font-family: "Space Grotesk", Helvetica, sans-serif;
 }
+
+@layer components {
+  .prose h1 {
+    @apply text-4xl font-bold text-gray-200;  /* Darker color for h1 */
+  }
+
+  .prose h2 {
+    @apply text-3xl font-semibold text-gray-200; /* Slightly lighter for h2 */
+  }
+
+  .prose h3 {
+    @apply text-2xl font-medium text-gray-200; /* Lighter for h3 */
+  }
+
+  .prose h4 {
+    @apply text-xl text-gray-200; /* Lighter for h4 */
+  }
+
+  /* Responsive sizes */
+  @media (max-width: 640px) { /* Small screens and up (sm) */
+    .prose h1 {
+      @apply text-3xl; /* h1 becomes 3xl on small screens */
+    }
+    .prose h2 {
+      @apply text-2xl; /* h2 becomes 2xl on small screens */
+    }
+    .prose h3 {
+      @apply text-xl; /* h3 becomes xl on small screens */
+    }
+  }
+
+  @media (min-width: 640px) {
+    .prose p {
+      @apply text-lg;
+    }
+
+    .prose span {
+      @apply text-lg;
+    }
+
+    .prose pre {
+      @apply text-lg;
+    }
+    .prose code {
+      @apply text-lg;
+    }
+  }
+}
