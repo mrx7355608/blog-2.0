@@ -23,6 +23,10 @@ body {
     @apply text-xl text-gray-200; /* Lighter for h4 */
   }
 
+  .prose pre {
+    @apply bg-gray-900;
+  }
+
   /* Responsive sizes */
   @media (max-width: 640px) { /* Small screens and up (sm) */
     .prose h1 {
