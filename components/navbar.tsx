@@ -46,7 +46,7 @@ export const Navbar = () => {
           </svg>
         </button>
 
-        <div className="dropdown sm:hidden">
+        <div className="dropdown dropdown-end sm:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,9 @@ export const Navbar = () => {
             className="menu menu-sm dropdown-content bg-gray-900 rounded-md z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Homepage</a>
+              <Link href="/">
+                Homepage 
+              </Link>
             </li>
             <li>
               <Link href="https://mrx7355608.github.io/portfolio">

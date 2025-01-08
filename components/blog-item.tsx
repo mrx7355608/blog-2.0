@@ -31,7 +31,7 @@ export const BlogItem = ({ blog }: { blog: IBlog }) => {
       </div>
 
       {/* SUMMARY */}
-      <p className="text-md sm:text-lg text-gray-400 mt-3 mb-7">{blog.summary.substring(0, 300)}...</p>
+      <p className="text-md sm:text-lg text-gray-400 mt-3 mb-7">{blog.summary.substring(0, 250)}...</p>
 
       {/* READ MORE LINK */}
       <Link href={'/' + blog.slug} className="text-sky-300">
