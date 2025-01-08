@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 export const Navbar = () => {
   const openModal = () => {
+	  // eslint-disable-next-line
     (document.getElementById('my_modal_5') as any).showModal();
   };
 

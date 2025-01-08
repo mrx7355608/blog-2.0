@@ -1,4 +1,3 @@
-import { IBlog } from '@/types/blog.types';
 import { getBlogsData, getAllBlogs } from '@/utils/get-blogs'
 
 
@@ -20,7 +19,7 @@ export default async function Page({ params }: {
 
       {/* TAGS */}
       <div className="flex gap-2 items-center mt-3 flex-wrap w-full justify-center">
-        {blog.tags.map((tag) => {
+        {blog.tags.map((tag: string) => {
           return (
             <span
               key={tag}
