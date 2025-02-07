@@ -6,7 +6,7 @@ export const BlogItem = ({ blog }: { blog: IBlog }) => {
     <div className="w-full">
       {/* DATE */}
       <p className="text-gray-500 mb-2">
-      	{new Date(blog.date).toDateString().slice(4)}
+        {new Date(blog.date).toDateString().slice(4)}
       </p>
 
       {/* TITLE */}
@@ -31,11 +31,13 @@ export const BlogItem = ({ blog }: { blog: IBlog }) => {
       </div>
 
       {/* SUMMARY */}
-      <p className="text-md sm:text-lg text-gray-400 mt-3 mb-7">{blog.summary.substring(0, 250)}...</p>
+      <p className="text-md sm:text-lg text-gray-400 mt-3 mb-7">
+        {blog.summary.substring(0, 250)}...
+      </p>
 
       {/* READ MORE LINK */}
       <Link href={'/' + blog.slug} className="text-sky-300">
-      	Read more
+        Read more
       </Link>
       <hr className="border-gray-900 mt-5" />
     </div>
