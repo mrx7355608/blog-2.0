@@ -28,7 +28,7 @@ Then give your app a name and click **Register App** button. Save the app creden
 
 ![](/blogs-screenshots/firebase_app_setup.png)
 
-```
+```ini
 NEXT_PUBLIC_FIREBASE_API_KEY=""
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=""
@@ -149,7 +149,7 @@ NEXT_PUBLIC_FIREBASE_VAPID_KEYS="your_key"
 
 Now your `.env` file will look something like this:
 
-```
+```ini
 NEXT_PUBLIC_FIREBASE_API_KEY="..."
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="..."
 NEXT_PUBLIC_FIREBASE_PROJECT_ID="..."

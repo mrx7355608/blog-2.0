@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-  font-family: "Space Grotesk", Helvetica, sans-serif;
+  font-family: 'Space Grotesk', Helvetica, sans-serif;
 }
 
 @layer components {
   .prose h1 {
-    @apply text-4xl font-bold text-gray-200 mt-12 mb-0 pb-0; 
+    @apply text-4xl font-bold text-gray-200 mt-12 mb-0 pb-0;
   }
 
   .prose h2 {
@@ -24,11 +24,18 @@ body {
   }
 
   .prose pre {
-    @apply bg-gray-900;
+    @apply bg-gray-900 !important;
+    @apply rounded-sm !important;
+  }
+
+  .prose ol,
+  ul {
+    @apply text-lg !important;
   }
 
   /* Responsive sizes */
-  @media (max-width: 640px) { /* Small screens and up (sm) */
+  @media (max-width: 640px) {
+    /* Small screens and up (sm) */
     .prose h1 {
       @apply text-3xl; /* h1 becomes 3xl on small screens */
     }
