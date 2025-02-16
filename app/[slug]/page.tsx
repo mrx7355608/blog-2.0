@@ -1,3 +1,4 @@
+import BlogContent from '@/components/blog-content';
 import { getBlogsData, getAllBlogs } from '@/utils/get-blogs';
 
 export default async function Page({
@@ -34,10 +35,9 @@ export default async function Page({
         })}
       </div>
       <hr className="border-gray-900 mt-5 mb-12" />
-      <section
-        className="prose max-w-none text-left mb-12"
-        dangerouslySetInnerHTML={{ __html: blog.content }}
-      />
+
+      {/* CONTENT */}
+      <BlogContent content={blog.content} />
     </div>
   );
 }
