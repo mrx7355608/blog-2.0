@@ -7,6 +7,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-ini';
+import 'prismjs/components/prism-jsx';
 // Plugins
 import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/toolbar/prism-toolbar.css';
