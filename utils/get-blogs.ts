@@ -21,13 +21,11 @@ export async function getBlogsData(filename: string) {
   const { data, content } = matter(fileContents);
 
   // Convert Markdown content to HTML using remark
-  const processedContent = await remark()
-    .use(remarkHtml)
-    .process(content);
+  const processedContent = await remark().use(remarkHtml).process(content);
   const contentHtml = processedContent.toString();
 
   return {
-    slug: filename.replace(".md", ""),
+    slug: filename.replace('.md', ''),
     content: contentHtml,
     title: data.title,
     summary: data.summary,
@@ -37,13 +35,15 @@ export async function getBlogsData(filename: string) {
 }
 
 // Get a list of all posts with the required metadata
-export function getAllBlogs() {
+export async function getAllBlogs() {
   const filenames = getBlogsFilenames();
   const allPostsData = filenames.map((filename: string) => {
     return getBlogsData(filename);
   });
 
   // Wait for all posts to be processed
-  return Promise.all(allPostsData);
+  const blogs = await Promise.all(allPostsData);
+  return blogs.sort(
+    (a, b) => Number(new Date(b.date)) - Number(new Date(a.date)),
+  );
 }
-
